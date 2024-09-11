@@ -1,0 +1,58 @@
+{
+  "name": "demos-babylon",
+  "version": "2.0.4",
+  "description": "Demos of the Babylon version of the Amazon Sumerian Hosts JS library",
+  "private": true,
+  "scripts": {
+    "test": "",
+    "start": "BROWSER='google chrome' webpack serve",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com",
+    "organization": true
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@amazon-sumerian-hosts/babylon": "^2.0.4",
+    "@aws-sdk/client-cognito-identity": "^3.282.0",
+    "@aws-sdk/client-sagemaker-runtime": "^3.282.0",
+    "@aws-sdk/credential-provider-cognito-identity": "^3.282.0",
+    "@babylonjs/core": "^4.2.1",
+    "@babylonjs/loaders": "^4.2.1",
+    "@babylonjs/materials": "^4.2.1",
+    "amazon-cognito-identity-js": "^6.3.12",
+    "aws-amplify": "^6.3.1",
+    "axios": "^1.6.8",
+    "buffer": "^6.0.3",
+    "franc": "^6.1.0",
+    "is-english": "^1.3.0",
+    "languagedetect": "^2.0.0",
+    "pako": "^2.1.0",
+    "uninstall": "0.0.0"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.0.2",
+    "@aws-amplify/backend-cli": "^1.0.3",
+    "aws-cdk": "^2.141.0",
+    "aws-cdk-lib": "^2.141.0",
+    "constructs": "^10.3.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "esbuild": "^0.21.2",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "tsx": "^4.10.2",
+    "typescript": "^5.4.5",
+    "webpack": "^5.86.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.7.4"
+  }
+}

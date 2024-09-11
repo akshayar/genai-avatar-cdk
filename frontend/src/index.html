@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Amazonian, Bedrock Knowledge Base Demo</title> <!--You can change this title-->
+  <!-- <title>TITLE_VAR</title> -->
+  <link href="https://fonts.cdnfonts.com/css/amazon-ember" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+
+  <link rel="stylesheet" href="alexaTMDemo.css" />
+
+  <!-- Sumerian Host dependencies -->
+  <script type="text/javascript" src="https://sdk.amazonaws.com/js/aws-sdk-2.645.0.min.js"></script>
+
+  <!-- Demo logic -->
+  <script type="module" src="alexaTMDemo.js"></script>
+</head>
+
+<body>
+  <div id="mainScreen" class="screen loading">
+    <canvas id="renderCanvas"></canvas>
+
+    <div id="uiScreens">
+      <!-- Screen displayed when user need and auth process, by default is public -->
+      <div id="startScreen" class="screen modal hide">
+        <div id="startDialog" class="dialog">
+          <h2>Bienvenido/a a chat bot</h2> <!--You can change modal tiitle-->
+          <form class="needs-validation" novalidate id="sign-in-form">
+            <div class="form-floating">
+              <input type="text" class="form-control-input" id="floatingUsername" placeholder="Username" required>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control-input" id="floatingPassword" placeholder="Password" required>
+            </div>
+            <button class="w-40 btn btn-lg btn-primary" type="submit" id="startButton">Iniciar Sesión</button> <!--You can chande this to another language-->
+          </form>
+        </div>
+      </div>
+
+      <div id="chatbotUiScreen" class="screen hide">
+        <div id="uiPanel" class="panel">
+          <textarea id="speechText" rows="8">
+              Hi
+          </textarea>
+          <button id="speakButton">Preguntar</button> <!--You can chande this to another language-->
+        </div>
+        <div id="userMessageContainer" class="noChildPointerEvents">
+          <div class="messageBox">
+            <div id="transcriptDisplay" class="message">
+              <p id="transcriptText">
+                
+              </p>
+            </div>
+            <div id="processingMessage" class="message">
+              <p><span class="spinner"></span>Procesando...</p> <!--You can chande this to another language-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="loadingScreen" class="screen">
+    <p>Cargando...</p> <!--You can chande this to another language-->
+  </div>
+</body>
+
+</html>
