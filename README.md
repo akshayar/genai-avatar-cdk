@@ -20,7 +20,7 @@ git clone https://github.com/abarrales/genai-avatar-cdk.git
 Add the file you want the Avatar to respond from into the `files/` directory. Right now it has the Solutions Architect Associate Exam Guide. Delete it and add your file.
 > ***It is required that you have access to codecommit in order to deploy the demo. We recommend uploading the repository to CodeCommit, create a Cloud9 instance, clone the CodeCommit repository and run the following commands in Cloud9***.
 ```
-cd avatar-cdk
+cd genai-avatar-cdk
 npm install
 sh setup.sh
 ```
