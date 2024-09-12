@@ -74,7 +74,7 @@ export class AvatarBackendStack extends cdk.Stack {
       timeout: cdk.Duration.seconds(30),
       environment: {
         'KNOWLEDGE_BASE_ID': kb.knowledgeBaseId,
-        'MODEL_ARN': "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-haiku-20240307-v1:0",
+        'MODEL_ARN': "anthropic.claude-3-haiku-20240307-v1:0",
         'KNOWLEDGE_BASE_TYPE': 'KNOWLEDGE_BASE',
         'GUARDRAIL_ID': 'Add your Guardrail ID here',
       }
