@@ -90,9 +90,9 @@ export class AvatarBackendStack extends cdk.Stack {
         allowHeaders: ['Content-Type', 'X-Amz-Date', 'Authorization', 'X-Api-Key', 'X-Amz-Security-Token', 'Access-Control-Allow-Origin']
       },
       proxy: false,
-      deployOptions: {
-        loggingLevel: apigateway.MethodLoggingLevel.INFO,
-      }
+      //deployOptions: {
+      //  loggingLevel: apigateway.MethodLoggingLevel.INFO,
+      //}
     });
 
     api_avatar.root.addMethod('POST', new apigateway.LambdaIntegration(bedrock_lambda), {
