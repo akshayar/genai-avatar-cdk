@@ -47,6 +47,12 @@ export class AvatarFrontendStack extends cdk.Stack {
         });
 
         const master = amplifyApp.addBranch('master');
+		
+		new CfnOutput(this, 'AmplifyBranchURL', {
+            value: master.branchName.concat('.', amplifyApp.defaultDomain),
+            description: 'Amplify Deployment URL for master branch',
+            exportName: 'AmplifyBranchURL',
+        });
 
     }
 }
