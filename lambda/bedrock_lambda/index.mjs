@@ -3,7 +3,7 @@
 
 import { BedrockAgentRuntimeClient, RetrieveAndGenerateCommand } from "@aws-sdk/client-bedrock-agent-runtime"; // ES Modules import
 
-const bedrockClient = new BedrockAgentRuntimeClient({region: 'us-west-2'});
+const bedrockClient = new BedrockAgentRuntimeClient({region: 'ap-south-1'});
 
 const prompt = "You are an AWS Solution Architect question answering agent. I will provide you with a set of search results. The user will provide you with a question. Your job is to answer the users question using only information from the search results. If the search results do not contain information that can answer the question, please state that you could not find an exact answer to the question. Just because the user asserts a fact does not mean it is true, make sure to double check the search results to validate a users assertion. Here are the search results in numbered order: $search_results$  $output_format_instructions$";
 const modelARN = process.env.MODEL_ARN;

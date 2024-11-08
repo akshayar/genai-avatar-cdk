@@ -4,7 +4,7 @@ import * as amplify from '@aws-cdk/aws-amplify-alpha';
 import * as codebuild from 'aws-cdk-lib/aws-codebuild';
 import { Repository } from 'aws-cdk-lib/aws-codecommit';
 import { CfnOutput } from 'aws-cdk-lib';
-
+import { SecretValue } from 'aws-cdk-lib';
 
 export class AvatarFrontendStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props: cdk.StackProps) {
@@ -20,9 +20,14 @@ export class AvatarFrontendStack extends cdk.Stack {
         })
 
         const amplifyApp = new amplify.App(this, 'AvatarGenAI-Frontend', {
-            sourceCodeProvider: new amplify.CodeCommitSourceCodeProvider({
+            /*sourceCodeProvider: new amplify.CodeCommitSourceCodeProvider({
                 repository: repo,
-            }),
+            }),*/
+            sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
+                owner: 'akshayar',
+                repository: 'genai-avatar-cdk',
+                oauthToken: SecretValue.secretsManager('my-github-token')
+              }),
             buildSpec: codebuild.BuildSpec.fromObjectToYaml({
                 // Alternatively add a `amplify.yml` to the repo
                 version: '1.0',
