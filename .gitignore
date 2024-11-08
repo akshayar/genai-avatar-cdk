@@ -3,7 +3,13 @@
 !jest.config.js
 *.d.ts
 node_modules
+.npm
 
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*

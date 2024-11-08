@@ -69,7 +69,7 @@ async function createScene() {
   // "Cristine", "Fiona", "Grace", "Maya", "Jay", "Luke", "Preston", "Wes"
   const characterId = "Cristine";
   //const characterId = "CHARACTERID_VAR";
-  const pollyConfig = { pollyVoice: "Mia", pollyEngine: "neural" };
+  const pollyConfig = { pollyVoice: "Kajal", pollyEngine: "neural" };
   //const pollyConfig = { pollyVoice: "POLLY_VOICEID_VAR", pollyEngine: "neural" };
   const characterConfig = HostObject.getCharacterConfig(
     "./assets/character-assets",
